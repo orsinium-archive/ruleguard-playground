@@ -32,35 +32,28 @@
 </head>
 
 <body>
-  <h1 class="text-center">golangci-lint</h1>
+  <h1 class="text-center">ruleguard</h1>
   <h5 class="text-center">
-    <a href="https://github.com/life4/flakehell" target="_blacnk">FlakeHell</a>
-    playground (<a href="https://github.com/life4/flakehell-online" target="_blacnk">GitHub</a>)
+    <a href="https://github.com/quasilyte/go-ruleguard" target="_blacnk">RuleGuard</a>
+    playground (<a href="https://github.com/quasilyte/go-ruleguard" target="_blacnk">GitHub</a>)
   </h5>
   <div class="container-fluid">
     <div class="container">
 
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">main.go</h5>
-              <textarea class="card-text" id="lint-code" contenteditable="true">a=1+2</textarea>
-              <button href="#" class="btn btn-outline-primary" disabled id="py-lint">
-                run golangci-lint
+              <textarea class="card-text" id="lint-code" contenteditable="true">Loading...</textarea>
+              <input class="card-text" id="lint-rule" value="m.Match(`$x`)" />
+              <button href="#" class="btn btn-outline-primary" disabled id="lint-run">
+                run ruleguard
               </button>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">.golangci.yml</h5>
-              <pre class="card-text" id="lint-config" contenteditable="true">Loading...</pre>
-            </div>
-          </div>
-
+        <div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
               <div class="card">
