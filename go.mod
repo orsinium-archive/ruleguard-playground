@@ -1,4 +1,4 @@
-module github.com/life4/golangci-lint-online
+module github.com/life4/ruleguard-playground
 
 go 1.13
 

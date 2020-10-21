@@ -79,6 +79,7 @@ func (rg *RuleGuard) makePass(src string) (*analysis.Pass, error) {
 	}
 	return &pass, nil
 }
+
 func (rg *RuleGuard) Run(pass *analysis.Pass, src string, rule string) ([]analysis.Diagnostic, error) {
 	issues := make([]analysis.Diagnostic, 0)
 	pass.Report = func(d analysis.Diagnostic) {
@@ -97,6 +98,7 @@ func (rg *RuleGuard) Run(pass *analysis.Pass, src string, rule string) ([]analys
 }
 
 func (rg *RuleGuard) table(issues []analysis.Diagnostic, pass *analysis.Pass) {
+	rg.out.SetText("")
 	table := rg.doc.CreateElement("table")
 	table.Attribute("class").Set("table table-sm")
 

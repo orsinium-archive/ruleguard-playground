@@ -15,7 +15,7 @@ func main() {
 func main() {
 	window := web.GetWindow()
 	doc := window.Document()
-	doc.SetTitle("golangci-lint online")
+	doc.SetTitle("ruleguard playground")
 
 	// init code editor
 	input := doc.Element("lint-code")
